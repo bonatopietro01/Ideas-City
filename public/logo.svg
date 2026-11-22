@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb6e0"/>
+      <stop offset="1" stop-color="#cfe4f3"/>
+    </linearGradient>
+  </defs>
+  <!-- sfondo -->
+  <rect width="256" height="256" rx="56" fill="url(#cielo)"/>
+
+  <!-- gru -->
+  <g fill="#f2b632">
+    <rect x="58" y="62" width="10" height="118"/>
+    <rect x="40" y="56" width="128" height="9" rx="2"/>
+    <rect x="30" y="52" width="16" height="16" rx="2" fill="#5d6b77"/>
+    <path d="M63 56 L63 36 L72 56 Z"/>
+  </g>
+  <rect x="150" y="65" width="3" height="26" fill="#1f2a33"/>
+  <rect x="145" y="90" width="13" height="8" rx="2" fill="#1f2a33"/>
+
+  <!-- edificio -->
+  <rect x="96" y="92" width="72" height="92" rx="4" fill="#ff6b2c"/>
+  <rect x="92" y="86" width="80" height="10" rx="3" fill="#3a4651"/>
+  <g fill="#ffd779">
+    <rect x="106" y="104" width="14" height="14" rx="2"/>
+    <rect x="125" y="104" width="14" height="14" rx="2"/>
+    <rect x="144" y="104" width="14" height="14" rx="2"/>
+    <rect x="106" y="126" width="14" height="14" rx="2"/>
+    <rect x="125" y="126" width="14" height="14" rx="2" fill="#3c4a57"/>
+    <rect x="144" y="126" width="14" height="14" rx="2"/>
+    <rect x="106" y="148" width="14" height="14" rx="2" fill="#3c4a57"/>
+    <rect x="125" y="148" width="14" height="14" rx="2"/>
+    <rect x="144" y="148" width="14" height="14" rx="2"/>
+  </g>
+  <!-- antenna -->
+  <rect x="130" y="66" width="4" height="22" fill="#c9ced3"/>
+  <circle cx="132" cy="64" r="6" fill="#ff3b30"/>
+
+  <!-- nuvola -->
+  <g fill="#ffffff">
+    <circle cx="72" cy="206" r="24"/>
+    <circle cx="112" cy="194" r="28"/>
+    <circle cx="156" cy="196" r="26"/>
+    <circle cx="192" cy="208" r="20"/>
+    <rect x="44" y="204" width="168" height="26" rx="13"/>
+  </g>
+</svg>

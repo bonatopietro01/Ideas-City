@@ -1,0 +1,215 @@
+{
+  "aggiornato": "2026-11-20",
+  "livelli": [
+    {"n": 0, "nome": "Terreno", "desc": "Idea annotata. Sul lotto c'è solo un cartello."},
+    {"n": 1, "nome": "Fondamenta", "desc": "Scheda e prime ricerche fatte. Si gettano le fondamenta e si montano le impalcature."},
+    {"n": 2, "nome": "Progetto", "desc": "Decisioni chiave prese (per chi, come). Arrivano gli alberi intorno al lotto."},
+    {"n": 3, "nome": "Cantiere", "desc": "In sviluppo. Arriva la gru."},
+    {"n": 4, "nome": "Prototipo", "desc": "Funziona e si può provare. L'edificio ha il tetto."},
+    {"n": 5, "nome": "Inaugurato", "desc": "Lanciato e in uso. Antenna accesa e bandiera."}
+  ],
+  "stati": {
+    "fatto": "Fatto",
+    "parziale": "In corso",
+    "dafare": "Da fare",
+    "chiarire": "Da chiarire"
+  },
+  "quartiere": {
+    "id": "folderrocket",
+    "nome": "FolderRocket",
+    "breve": "Il centro di controllo per file, cartelle, mail e documenti. È il quartiere centrale della città: ogni palazzo è un gruppo di funzioni.",
+    "scheda": "claude/progetti/FolderRocket.md"
+  },
+  "progetti": [
+    {
+      "id": "fr-hq", "quartiere": true, "nome": "FolderRocket HQ", "colore": "#ff6b2c", "livello": 3,
+      "breve": "La torre principale dell'app: le tappe generali del progetto.",
+      "prossimo": "Avere accesso al codice dell'app (forse in Documenti/Codex)",
+      "tappe": [
+        {"t": "Prototipi degli strumenti (mail, OCR, PDF, sposta file, note)", "s": "fatto"},
+        {"t": "Test su Windows di sposta file aperto", "s": "dafare"},
+        {"t": "Accesso al codice dell'app", "s": "dafare"},
+        {"t": "Integrare gli script nell'app", "s": "dafare"},
+        {"t": "Versione stabile", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Prototipati 9 strumenti e funzioni"]
+    },
+    {
+      "id": "fr-file", "quartiere": true, "nome": "File e cartelle", "colore": "#f2994a", "livello": 3,
+      "breve": "Spostare, versionare, archiviare e trovare i file.",
+      "prossimo": "Provare lo spostamento di file aperti in Word ed Excel",
+      "tappe": [
+        {"t": "File aperto: salva, chiude, sposta, riapre", "s": "parziale"},
+        {"t": "Versioni con il salvataggio Word/Excel", "s": "parziale"},
+        {"t": "Undo", "s": "fatto"},
+        {"t": "Salvi un file e trova la cartella giusta", "s": "dafare"},
+        {"t": "Cartelle complesse come albero genealogico", "s": "dafare"},
+        {"t": "Zone di lavoro (anche CargoRocket)", "s": "dafare"},
+        {"t": "Pagine per preparare le modalità", "s": "dafare"},
+        {"t": "Archivio personalizzabile (menu o comando)", "s": "dafare"},
+        {"t": "Tabelle interne dell'archivio", "s": "dafare"},
+        {"t": "Cartella aperta nel sito web", "s": "dafare"},
+        {"t": "Cartelle Google Drive e Outlook", "s": "dafare"},
+        {"t": "Skill che sorvegliano le cartelle", "s": "dafare"},
+        {"t": "File CyberRocketKey", "s": "chiarire"}
+      ],
+      "registro": ["20/11/2026 · sposta_file_aperto.py con versioni e undo"]
+    },
+    {
+      "id": "fr-mail", "quartiere": true, "nome": "Email", "colore": "#56a3e8", "livello": 4,
+      "breve": "Leggere le mail, archiviarle in PDF con link e aggiornare Excel.",
+      "prossimo": "Mail come post, da gestire da più app",
+      "tappe": [
+        {"t": "Leggi mail e crea PDF", "s": "fatto"},
+        {"t": "Ipertesto per ogni file", "s": "fatto"},
+        {"t": "Aggiorna Excel dalle mail", "s": "fatto"},
+        {"t": "Più caselle email", "s": "fatto"},
+        {"t": "Mail come post da più app", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · mail_to_pdf_excel.py testato"]
+    },
+    {
+      "id": "fr-doc", "quartiere": true, "nome": "Documenti e PDF", "colore": "#9b7bea", "livello": 4,
+      "breve": "Imaging, OCR verso Excel, strumenti PDF.",
+      "prossimo": "Imaging di pagine web dentro un blocco",
+      "tappe": [
+        {"t": "Imaging documenti verso Excel", "s": "fatto"},
+        {"t": "Cambia ordine pagine PDF", "s": "fatto"},
+        {"t": "Pagina in un blocco + imaging", "s": "dafare"},
+        {"t": "Plugin FolderRocket al posto di Download", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · ocr_to_excel.py e pdf_riordina.py testati"]
+    },
+    {
+      "id": "fr-ui", "quartiere": true, "nome": "Interfaccia e blocchi", "colore": "#3fb98a", "livello": 3,
+      "breve": "Pagine, blocchi, obiettivi, mondi e note.",
+      "prossimo": "Finire la pagina dei blocchi",
+      "tappe": [
+        {"t": "Note libere con Clear", "s": "fatto"},
+        {"t": "Pagina obiettivi collegata ai blocchi", "s": "dafare"},
+        {"t": "Finire la pagina dei blocchi", "s": "dafare"},
+        {"t": "Mondi di lavoro tipo social", "s": "dafare"},
+        {"t": "Collegamento database tipo Graphify", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Pagina Note rapide pubblicata"]
+    },
+    {
+      "id": "fr-fix", "quartiere": true, "nome": "Manutenzione", "colore": "#8a96a3", "livello": 1,
+      "breve": "Correggere e velocizzare l'app.",
+      "prossimo": "Serve il codice dell'app",
+      "tappe": [
+        {"t": "Aggiustare la lettura dei file", "s": "dafare"},
+        {"t": "Migliorare e velocizzare l'app", "s": "dafare"}
+      ],
+      "registro": []
+    },
+
+    {
+      "id": "job", "nome": "Mail offerte di lavoro", "colore": "#2f9fd8", "livello": 2,
+      "breve": "Ogni giorno una mail con le nuove offerte trovate online, già filtrate.",
+      "prossimo": "Confermare ruoli e orario, poi attivare",
+      "tappe": [
+        {"t": "Filtri: pharma/medtech, Svizzera, no PhD", "s": "fatto"},
+        {"t": "Ruoli precisi e orario di invio", "s": "dafare"},
+        {"t": "Attivare l'invio giornaliero", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "farmaci", "nome": "Farmaci in scadenza", "colore": "#e0567a", "livello": 1,
+      "breve": "Recuperare i farmaci vicini alla scadenza invece di buttarli, in modo legale.",
+      "prossimo": "Scegliere il modello: bacheca B2B tra farmacie o software scadenze",
+      "tappe": [
+        {"t": "Ricerca regolatoria iniziale (IT/CH)", "s": "fatto"},
+        {"t": "Scegliere il modello", "s": "chiarire"},
+        {"t": "Parlare con 3–5 farmacisti", "s": "dafare"},
+        {"t": "Verifica legale", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata con ricerca regolatoria"]
+    },
+    {
+      "id": "irrigazione", "nome": "Irrigazione smart", "colore": "#2bb3a3", "livello": 1,
+      "breve": "Prevedere quanta acqua serve e comandare gli irrigatori per sprecarne meno.",
+      "prossimo": "Scegliere il cliente: privati, agricoltori o comuni",
+      "tappe": [
+        {"t": "Ricerca concorrenti", "s": "fatto"},
+        {"t": "Scegliere il cliente tipo", "s": "dafare"},
+        {"t": "Prototipo meteo + fabbisogno per 1 zona", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "giornale", "nome": "Giornale degli esperti", "colore": "#c9a227", "livello": 1,
+      "breve": "Discussioni dove commentano solo esperti verificati.",
+      "prossimo": "Scegliere la nicchia di partenza",
+      "tappe": [
+        {"t": "Concept e funzioni minime", "s": "fatto"},
+        {"t": "Scegliere la nicchia", "s": "dafare"},
+        {"t": "Prototipo web", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "musei", "nome": "Musei e giochi", "colore": "#b4643c", "livello": 1,
+      "breve": "Mappe interattive e giochi per musei e opere in Italia.",
+      "prossimo": "Scegliere un museo o una città pilota",
+      "tappe": [
+        {"t": "Ricerca su cosa esiste già", "s": "fatto"},
+        {"t": "Scegliere il pilota", "s": "dafare"},
+        {"t": "Caccia al tesoro su 5–10 opere", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "mappa", "nome": "Mappa città ed eventi", "colore": "#e5813a", "livello": 1,
+      "breve": "Mappa con cose da vedere ed eventi sponsorizzati.",
+      "prossimo": "Scegliere la città pilota",
+      "tappe": [
+        {"t": "Concept e modello di guadagno", "s": "fatto"},
+        {"t": "Scegliere la città pilota", "s": "dafare"},
+        {"t": "Mappa demo con 20 luoghi", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "ai", "nome": "Azienda di AI", "colore": "#5a67d8", "livello": 1,
+      "breve": "Un'azienda che porta l'AI e le persone giuste nelle aziende.",
+      "prossimo": "Scegliere modello e nicchia",
+      "tappe": [
+        {"t": "Modelli possibili", "s": "fatto"},
+        {"t": "Scegliere modello e nicchia", "s": "dafare"},
+        {"t": "Test con 2–3 aziende", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "gestionale", "nome": "Gestionale", "colore": "#6f8f3a", "livello": 1,
+      "breve": "Contabilità, fatture, magazzino e cespiti. Forse un modulo di FolderRocket.",
+      "prossimo": "Decidere se è un modulo di FolderRocket o un'app a sé",
+      "tappe": [
+        {"t": "Moduli definiti", "s": "fatto"},
+        {"t": "Modulo o app a sé?", "s": "chiarire"},
+        {"t": "Partire dalla fatturazione", "s": "dafare"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "codingdate", "nome": "CodingDate", "colore": "#d65db1", "livello": 0,
+      "breve": "Un'app per programmare insieme ad altri. Il concetto è da chiarire.",
+      "prossimo": "Chiarire: partner di coding, co-founder tecnico o eventi?",
+      "tappe": [
+        {"t": "Chiarire il concetto", "s": "chiarire"}
+      ],
+      "registro": ["20/11/2026 · Scheda creata"]
+    },
+    {
+      "id": "reagisce", "nome": "Come si reagisce", "colore": "#9aa5b1", "livello": 0,
+      "breve": "\"Come si reagisce, come si connette\" (14/11/2026). Da chiarire.",
+      "prossimo": "Spiegare l'idea",
+      "tappe": [
+        {"t": "Chiarire l'idea", "s": "chiarire"}
+      ],
+      "registro": []
+    }
+  ]
+}

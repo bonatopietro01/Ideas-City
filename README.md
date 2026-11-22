@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIdeaCity
 
-## Getting Started
+Trasforma un second brain (cartella Markdown/Obsidian) in una **città delle idee** 3D da esplorare.
+Ogni progetto è un edificio, ogni tappa un piano, e i cartelli rossi mostrano **cosa manca**.
 
-First, run the development server:
+## Avvio
 
-```bash
+```powershell
+npm install
+copy .env.local.example .env.local   # poi inserisci la tua ANTHROPIC_API_KEY
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Apri http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Come legge le note
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Nel Markdown | Nella città |
+|---|---|
+| cartella di primo livello | quartiere |
+| nota con checkbox o `tipo: progetto` | edificio |
+| `- [x]` / `- [/]` / `- [ ]` / `- [?]` | piano illuminato / spento / impalcatura / impalcatura rossa |
+| `livello: 0-5` o `stato:` nel frontmatter | livello (cartello → gru → tetto → antenna) |
+| `[[link]]` a un'altra nota-progetto | strada tra i due edifici |
 
-## Learn More
+Con **Analisi AI** attiva, Claude (`claude-opus-5-5`) legge tutte le note, raggruppa i progetti anche senza checkbox
+e scrive le lacune: passi mancanti, decisioni da prendere, ipotesi mai verificate, collegamenti utili.
+Senza AI le lacune vengono da regole semplici (nessuna tappa, tappe "da chiarire", progetto isolato…).
 
-To learn more about Next.js, take a look at the following resources:
+Si può anche importare il `data.json` dell'artefatto originale.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Struttura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/lib/parse-vault.ts` — analisi locale del vault
+- `src/app/api/analizza/route.ts` — analisi AI con Claude (output strutturato)
+- `src/components/city-scene.ts` — motore 3D (three.js)
+- `src/lib/score.ts` — punteggio della città
+- `public/esempio/` — vault di esempio
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **MVP personale** (fatto): import → analisi → città esplorabile con "cosa manca".
+2. **Città condivise**: account, città pubblicate con link, visita alle città degli altri (es. Supabase).
+3. **Punteggi e classifica annuale**: punti per tappe completate, livelli saliti e lacune risolte, con storico per
+   evitare che si gonfino i numeri. I premi di fine anno in Italia rientrano nei *concorsi a premio* (DPR 430/2001):
+   va verificato con un consulente prima del lancio.
